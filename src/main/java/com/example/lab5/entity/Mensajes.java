@@ -23,4 +23,44 @@ public class Mensajes {
 
     @Column(name = "fecha_envio")
     private Timestamp fechaEnvio;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getRegaloTipo() {
+        return regaloTipo;
+    }
+
+    public void setRegaloTipo(String regaloTipo) {
+        this.regaloTipo = regaloTipo;
+    }
+
+    public String getRegaloColor() {
+        return regaloColor;
+    }
+
+    public void setRegaloColor(String regaloColor) {
+        this.regaloColor = regaloColor;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public Timestamp getFechaEnvio() {
+        return fechaEnvio;
+    }
+
+    public void setFechaEnvio(Timestamp fechaEnvio) {
+        this.fechaEnvio = fechaEnvio;
+    }
 }
