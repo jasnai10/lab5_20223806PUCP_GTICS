@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking de Usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header>
+    <div th:replace="fragments/navbar.html :: header"></div>
+</header>
+
+<main class="container">
+    <h1 class="mt-5">Ranking de Usuarios</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Posición</th>
+            <th>Usuario</th>
+            <th>Total de Regalos</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ranking, iterStat : ${rankings}">
+            <td th:text="${iterStat.index + 1}">1</td>
+            <td th:text="${ranking.usuario.nombre}">Usuario</td>
+            <td th:text="${ranking.totalRegalos}">Total Regalos</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>
