@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jardín de la Esperanza y Carritos de Amistad</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header>
+    <div th:replace="fragments/navbar.html :: header"></div>
+</header>
+
+<main class="container">
+    <h1 class="mt-5">Lista de Usuarios</h1>
+    <div class="row">
+        <div class="col-md-4" th:each="usuario : ${usuarios}">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${usuario.nombre}">Nombre</h5>
+                    <p class="card-text" th:text="${usuario.correo}">Correo</p>
+                    <p class="card-text" th:text="${usuario.descripcion}">Descripción</p>
+                    <a href="#" class="btn btn-primary">Enviar mensaje</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
