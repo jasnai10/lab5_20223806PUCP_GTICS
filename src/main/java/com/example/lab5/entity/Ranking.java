@@ -9,11 +9,11 @@ public class Ranking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Agregamos un ID auto-generado
     @Column(name = "id", nullable = false)
-    private Integer id;  // Campo ID explícito
+    private Integer id;
 
     @OneToOne
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private Usuario usuario;  // Relación con Usuario
+    private Usuario usuario;
 
     @Column(name = "total_regalos", nullable = false)
     private Integer totalRegalos;

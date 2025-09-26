@@ -104,6 +104,6 @@ public class Mensaje {
     }
 
     public enum RegaloTipo {
-        FLOR, CARRITO
+        Flor, Carrito;
     }
 }

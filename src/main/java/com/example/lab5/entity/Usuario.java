@@ -58,7 +58,7 @@ public class Usuario {
 
     //Añadir constructores
     public Usuario() {
-        // Constructor por defecto
+
     }
 
     public Usuario(String nombre, String apellido, String correo, Integer edad, String descripcion, String contrasena) {
